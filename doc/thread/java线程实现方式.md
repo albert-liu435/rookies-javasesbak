@@ -197,8 +197,5 @@ import java.util.concurrent.FutureTask;
 
 ![thread](.\pic\thread.jpg)
 
-都是
+相关源码参考： [https://github.com/albert-liu435/rookies-javases/tree/master/rookie-javase-thread]( https://github.com/albert-liu435/rookies-javases/tree/master/rookie-javase-thread ) 
 
-都是
-
-都是
