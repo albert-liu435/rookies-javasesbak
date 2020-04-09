@@ -10,6 +10,7 @@
     <modules>
         <module>rookie-javase-thread</module>
         <module>rookie-javase-jvm</module>
+        <module>rookie-javase-design</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
