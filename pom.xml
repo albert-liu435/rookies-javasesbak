@@ -11,6 +11,7 @@
         <module>rookie-javase-thread</module>
         <module>rookie-javase-jvm</module>
         <module>rookie-javase-design</module>
+        <module>rookie-javase-other</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
