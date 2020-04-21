@@ -1,13 +1,12 @@
-package com.rookie.bigdata.stringbuild;
+package com.rookie.bigdata;
 
 /**
- * @ClassName StringBuilderDemo
- * @Description StringBuilderDemo
- * @Author
- * @Date 2020/4/16 9:35
- * @Version 1.0
+ * @author rookie
+ * @version 1.0
+ * @date 2020/4/21 22:19
  */
-public class StringBuilderDemo {
+public class StringBuilderMain {
+
     public static void main(String[] args) throws Exception{
         StringBuilder stringBuilder=new StringBuilder();
         for(int i=0;i<10;i++){
@@ -22,13 +21,6 @@ public class StringBuilderDemo {
         }
 
         Thread.sleep(100);
-        System.out.println(stringBuilder.length());
-
-        StringBuffer stringBuffer=new StringBuffer();
-        String s=null;
-        stringBuffer.append(s).append("h");
-        System.out.println(stringBuffer);
-
-
+        System.out.println("StringBuilder长度："+stringBuilder.length());
     }
 }
