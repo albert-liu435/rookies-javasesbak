@@ -17,7 +17,16 @@ public class PersonBuilderMain {
                 .builder();
 
 
-        System.out.println(person);
+        Person build = new Person.SelfBuilder()
+                .buildName("张三")
+                .buildAddress("北京")
+                .buildAge(23)
+                .buildIDCard("110")
+                .build();
+
+        System.out.println(build);
+
+
     }
 
 }
