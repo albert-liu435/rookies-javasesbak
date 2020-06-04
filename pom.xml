@@ -12,6 +12,7 @@
         <module>rookie-javase-jvm</module>
         <module>rookie-javase-design</module>
         <module>rookie-javase-other</module>
+        <module>rookie-leetcode-java</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
