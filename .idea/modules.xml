@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rookie-javase-design/rookie-javase-design.iml" filepath="$PROJECT_DIR$/rookie-javase-design/rookie-javase-design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rookie-javase-jvm/rookie-javase-jvm.iml" filepath="$PROJECT_DIR$/rookie-javase-jvm/rookie-javase-jvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rookie-javase-other/rookie-javase-other.iml" filepath="$PROJECT_DIR$/rookie-javase-other/rookie-javase-other.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rookie-javase-thread/rookie-javase-thread.iml" filepath="$PROJECT_DIR$/rookie-javase-thread/rookie-javase-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rookie-leetcode-java/rookie-leetcode-java.iml" filepath="$PROJECT_DIR$/rookie-leetcode-java/rookie-leetcode-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rookies-javases.iml" filepath="$PROJECT_DIR$/rookies-javases.iml" />
+    </modules>
+  </component>
+</project>

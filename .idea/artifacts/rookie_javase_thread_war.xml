@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rookie-javase-thread:war">
+    <output-path>$PROJECT_DIR$/rookie-javase-thread/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>rookie-javase-thread</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="rookie-javase-thread.war">
+      <element id="artifact" artifact-name="rookie-javase-thread:war exploded" />
+    </root>
+  </artifact>
+</component>

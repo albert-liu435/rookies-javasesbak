@@ -1,6 +1,8 @@
 package com.rookie.bigdata.A001;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,16 +17,28 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        int[] array = {1, 4, 6, 9, 8, 2};
-        int target = 8;
+//        int[] array = {1, 4, 6, 9, 8, 2};
+//        int target = 8;
+//
+//        //int[] ints = Solution.twoSum(array, target);
+//        int[] ints = Solution.towSumMap(array, target);
+//
+//        for (int i = 0; i < ints.length; i++) {
+//            System.out.println(ints[i]);
+//        }
+//        System.out.println(ints);
 
-        //int[] ints = Solution.twoSum(array, target);
-        int[] ints = Solution.towSumMap(array, target);
 
-        for (int i = 0; i < ints.length; i++) {
-            System.out.println(ints[i]);
-        }
-        System.out.println(ints);
+
+        List<String> list=new ArrayList<>();
+
+        list.add("张三");
+        list.add("李四");
+
+
+        List<List<String>> lists = splitListByLimit(list, 1);
+        System.out.println(lists.size());
+        System.out.println(list.size());
 
 
     }
@@ -73,6 +87,30 @@ public class Solution {
 
         return null;
 
+    }
+
+
+
+    //拆分大List
+    public static <T> List<List<T>> splitListByLimit(List<T> list, int limit) {
+        List<List<T>> lists = new ArrayList<>();
+
+        if (list.size() > limit) {  //判断list大于限制
+            int length = list.size() / limit; //list的商
+            int i = 0;
+            for (; i < length; i++) {
+                int tmp = i * limit;
+                lists.add(list.subList(tmp, tmp + limit));
+            }
+            if (list.size() % limit != 0) {
+                i *= limit;
+                lists.add(list.subList(i, list.size()));
+            }
+        } else {
+            lists.add(list);
+        }
+
+        return lists;
     }
 
 }

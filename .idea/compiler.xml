@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rookie-javase-other" />
+        <module name="rookie-javase-design" />
+        <module name="rookie-javase-jvm" />
+        <module name="rookie-leetcode-java" />
+        <module name="rookie-javase-thread" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rookie-javase-design" target="1.8" />
+      <module name="rookie-javase-jvm" target="1.8" />
+      <module name="rookie-javase-other" target="1.8" />
+      <module name="rookie-javase-thread" target="1.8" />
+      <module name="rookie-leetcode-java" target="1.8" />
+      <module name="rookies-javases" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

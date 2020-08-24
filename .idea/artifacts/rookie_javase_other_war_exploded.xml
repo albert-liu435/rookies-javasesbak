@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="rookie-javase-other:war exploded">
+    <output-path>$PROJECT_DIR$/rookie-javase-other/target/rookie-javase-other</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>rookie-javase-other</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="rookie-javase-other" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.68" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/rookie-javase-other/target/rookie-javase-other/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="rookie-javase-other/web/Web" />
+    </root>
+  </artifact>
+</component>

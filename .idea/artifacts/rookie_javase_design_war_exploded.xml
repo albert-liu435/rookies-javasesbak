@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="rookie-javase-design:war exploded">
+    <output-path>$PROJECT_DIR$/rookie-javase-design/target/rookie-javase-design</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>rookie-javase-design</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="rookie-javase-design" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />
+          <element id="library" level="project" name="Maven: cglib:cglib:3.2.12" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:7.1" />
+          <element id="library" level="project" name="Maven: asm:asm-all:3.3.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/rookie-javase-design/target/rookie-javase-design/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="rookie-javase-design/web/Web" />
+    </root>
+  </artifact>
+</component>

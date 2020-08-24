@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="rookie-javase-thread:war exploded">
+    <output-path>$PROJECT_DIR$/rookie-javase-thread/target/rookie-javase-thread</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>rookie-javase-thread</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="rookie-javase-thread" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/rookie-javase-thread/target/rookie-javase-thread/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="rookie-javase-thread/web/Web" />
+    </root>
+  </artifact>
+</component>
