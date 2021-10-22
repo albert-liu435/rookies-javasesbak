@@ -1,0 +1,4 @@
+#BJ
+com.rookie.bigdata.util.spi.BJService
+#TJ
+com.rookie.bigdata.util.spi.TJService
