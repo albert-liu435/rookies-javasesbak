@@ -8,11 +8,11 @@
     <artifactId>rookies-javases</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>rookie-javase-thread</module>
+<!--        <module>rookie-javase-thread</module>
         <module>rookie-javase-jvm</module>
         <module>rookie-javase-design</module>
         <module>rookie-javase-other</module>
-        <module>rookie-leetcode-java</module>
+        <module>rookie-leetcode-java</module>-->
     </modules>
     <packaging>pom</packaging>
     <properties>
