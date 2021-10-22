@@ -34,5 +34,3 @@ Supplier<User> supplier = User::new;
     System.out.println(supplier2.get().toString());
     System.out.println(supplier2.get().toString());
 ```
-
-源码见[github](https://github.com/albert-liu435/rookies-javases/tree/master/rookie-javase-other/src/main/java/com/rookie/bigdata/supplier)
