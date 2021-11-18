@@ -12,6 +12,7 @@ public class SynchronizedDemoTest {
 
     public Object object=new Object();
 
+    //修饰静态方法
     public  synchronized static void print1(){
         System.out.println("hello synchronized print1" );
     }
@@ -19,12 +20,14 @@ public class SynchronizedDemoTest {
 
 
     public void print2(){
+        //自定义代码块
         synchronized (object){
             System.out.println("hello synchronized print2" );
         }
     }
 
 
+    //修饰普通方法
     public synchronized void print3(){
         System.out.println("hello synchronized print3");
     }

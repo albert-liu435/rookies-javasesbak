@@ -2,7 +2,7 @@ package com.rookie.bigdata.lang.thread;
 
 /**
  * @Classname DeadThreadDemo
- * @Description itsoku.com/course/1/1
+ * @Description
  * @Author rookie
  * @Date 2021/11/2 9:41
  * @Version 1.0

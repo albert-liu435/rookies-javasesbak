@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 /**
  * @Classname ExecutorLock
- * @Description itsoku.com/course/1/1
+ * @Description
  * @Author rookie
  * @Date 2021/11/2 9:49
  * @Version 1.0

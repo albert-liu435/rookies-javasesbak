@@ -14,6 +14,10 @@ public class ClassLoaderMain {
         System.out.println("1  "+contextClassLoader);
         System.out.println("2  "+contextClassLoader.getParent());
         System.out.println("3  "+contextClassLoader.getParent().getParent());
+
+
+        int i = Runtime.getRuntime().availableProcessors();
+        System.out.println(i);
     }
 
 }
