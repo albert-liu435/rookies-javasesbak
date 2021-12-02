@@ -60,10 +60,10 @@ public class T12_ThreadPool_5_CompletableFuture {
         // join等三个任务执行完成
         CompletableFuture.allOf(futureTM, futureTB, futureJD).join();
         // 做一些操作
-        /*CompletableFuture.supplyAsync(() -> priceOfTM())
+        CompletableFuture.supplyAsync(() -> priceOfTM())
                 .thenApply(String::valueOf)
                 .thenApply(str -> "price " + str)
-                .thenAccept(System.out::println);*/
+                .thenAccept(System.out::println);
         end = System.currentTimeMillis();
         System.out.println("use completable future! " + (end - start));
         try {

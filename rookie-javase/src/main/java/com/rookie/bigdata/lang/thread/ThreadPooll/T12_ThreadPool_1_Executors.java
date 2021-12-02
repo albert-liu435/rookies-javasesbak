@@ -193,11 +193,13 @@ public class T12_ThreadPool_1_Executors {
     }
 
     public static void main(String[] args) {
-         executorAndExecutorService();
+        //executorAndExecutorService();
         // newSingleThreadExecutor();
         // newCachedThreadPool();
       //  newFixedThreadPool();
         // newScheduledThreadPool();
+
+        System.out.println(3 << (Integer.SIZE - 3));
     }
 
 }
