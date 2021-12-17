@@ -4,17 +4,18 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+
   <parent>
     <artifactId>rookies-javases</artifactId>
     <groupId>com.rookie.bigdata</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>rookie-javase</artifactId>
+  <groupId>com.rookie.bigdata</groupId>
+  <artifactId>rookie-tomcat</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
-
-  <name>rookie-javase Maven Webapp</name>
+  <name>rookie-tomcat</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -29,54 +30,50 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-  <!--    <scope>test</scope>-->
+      <scope>test</scope>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>5.3.13</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-beans</artifactId>
-      <version>5.3.13</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>5.3.13</version>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+     <!-- <scope>provided</scope>-->
     </dependency>
 
-
-    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-util -->
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>31.0.1-jre</version>
-    </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-digester3 -->
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-digester3</artifactId>
-      <version>3.2</version>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-util</artifactId>
+      <version>7.0.0</version>
     </dependency>
 
 
   </dependencies>
 
   <build>
-    <finalName>rookie-javase</finalName>
+
+      <resources>
+        <resource>
+          <directory>src/main/java</directory>
+         <!-- <directory>src/resources</directory>-->
+          <includes>
+            <include>**/*.properties</include>
+            <include>**/*.xml</include>
+            <include>**/*.tld</include>
+            <include>**/*.xls</include>
+            <include>**/*.xlsx</include>
+          </includes>
+        </resource>
+      </resources>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
@@ -90,8 +87,8 @@
           <version>2.22.1</version>
         </plugin>
         <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -100,6 +97,15 @@
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
