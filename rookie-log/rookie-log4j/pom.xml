@@ -6,16 +6,16 @@
 
 
   <parent>
-    <artifactId>rookies-javases</artifactId>
+    <artifactId>rookie-log</artifactId>
     <groupId>com.rookie.bigdata</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.rookie.bigdata</groupId>
-  <artifactId>rookie-tomcat</artifactId>
+<!--  <groupId>com.rookie.bigdata</groupId>-->
+  <artifactId>rookie-log4j</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>rookie-tomcat</name>
+
+  <name>rookie-log4j</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -32,46 +32,16 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>4.0.1</version>
-     <!-- <scope>provided</scope>-->
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-util -->
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-util</artifactId>
-      <version>7.0.0</version>
-    </dependency>
-
-
-    <dependency>
-      <groupId>biz.aQute.bnd</groupId>
-      <artifactId>biz.aQute.bndlib</artifactId>
-      <version>5.2.0</version>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
 
   <build>
-
-      <resources>
-        <resource>
-          <directory>src/main/java</directory>
-         <!-- <directory>src/resources</directory>-->
-          <includes>
-            <include>**/*.properties</include>
-            <include>**/*.xml</include>
-            <include>**/*.tld</include>
-            <include>**/*.xls</include>
-            <include>**/*.xlsx</include>
-          </includes>
-        </resource>
-      </resources>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->

@@ -2,29 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rookies-javases</artifactId>
+        <groupId>com.rookie.bigdata</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.rookie.bigdata</groupId>
-    <artifactId>rookies-javases</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-<!--        <module>rookie-javase-thread</module>
-        <module>rookie-javase-jvm</module>
-        <module>rookie-javase-design</module>
-        <module>rookie-javase-other</module>
-        <module>rookie-leetcode-java</module>-->
-        <module>rookie-javase</module>
-        <module>rookie-tomcat</module>
-        <module>rookie-log</module>
-    </modules>
+    <artifactId>rookie-log</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>rookie-log4j</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
-
-
 
 </project>
