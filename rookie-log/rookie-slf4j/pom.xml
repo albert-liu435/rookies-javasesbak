@@ -10,12 +10,12 @@
     <groupId>com.rookie.bigdata</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-
-<!--  <groupId>com.rookie.bigdata</groupId>-->
-  <artifactId>rookie-log4j</artifactId>
+<!--
+  <groupId>com.rookie.bigdata</groupId>-->
+  <artifactId>rookie-slf4j</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>rookie-log4j</name>
+  <name>rookie-slf4j</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -29,36 +29,22 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
-<!--      <scope>test</scope>-->
+      <version>4.12</version>
+  <!--    <scope>test</scope>-->
     </dependency>
-    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+
+    <!--slf4j core 使用slf4j必須添加-->
     <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.32</version>
     </dependency>
+    <!--slf4j 自带的简单日志实现 -->
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.32</version>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.32</version>
     </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-<!--    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>2.17.1</version>
-    </dependency>-->
-    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
-<!--    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>2.17.1</version>
-    </dependency>-->
-
-
   </dependencies>
 
   <build>

@@ -15,7 +15,7 @@ import java.nio.channels.WritableByteChannel;
  * @Date 2021/12/20 11:04
  * @Version 1.0
  */
-public class ChannelDemo {
+public class ChannelDemo2 {
 
     public static void main(String[] args) throws Exception {
 

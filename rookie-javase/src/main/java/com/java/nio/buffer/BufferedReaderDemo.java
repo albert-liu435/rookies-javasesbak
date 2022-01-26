@@ -20,10 +20,10 @@ public class BufferedReaderDemo {
     public static void main(String[] args) {
         Path file = null;
         BufferedReader bufferedReader = null;
-        String relativelyPath = System.getProperty("user.dir");
+       // String relativelyPath = System.getProperty("user.dir");
         try {
             //file = Paths.get(relativelyPath + "/testout.txt");
-            file = Paths.get("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\nio\\channels\\ChannelDemo.java");
+            file = Paths.get("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\nio\\channels\\ChannelDemo1.java");
             InputStream inputStream = Files.newInputStream(file);
 
             bufferedReader = new BufferedReader(new InputStreamReader(inputStream));

@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>rookie-log4j</module>
+        <module>rookie-log-jcl</module>
+        <module>rookie-slf4j</module>
     </modules>
 
     <properties>

@@ -69,7 +69,7 @@ public class ScatterGatherIO {
         ByteBuffer buffer1 = ByteBuffer.allocate(8);
         // The Second Buffer is used for holding a data that we want to write
         ByteBuffer buffer2 = ByteBuffer.allocate(400);
-        ScatteringByteChannel scatter = createChannelInstance("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\nio\\channels\\ChannelDemo.java", false);
+        ScatteringByteChannel scatter = createChannelInstance("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\nio\\channels\\ChannelDemo1.java", false);
         // Reading a data from the channel
         try {
             scatter.read(new ByteBuffer[]{buffer1, buffer2});
