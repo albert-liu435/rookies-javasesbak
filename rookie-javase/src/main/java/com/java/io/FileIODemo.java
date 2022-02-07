@@ -55,7 +55,7 @@ public class FileIODemo {
     }
 
     @Test
-    public void testDel()throws Exception{
+    public void testDel() throws Exception {
         //如果文件不存在,则进行文件创建
         File file = new File("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\a.java");
         boolean exists = file.exists();
@@ -64,21 +64,44 @@ public class FileIODemo {
         System.out.println(flag);
         boolean delete = file.delete();
         System.out.println(delete);
-       // file.deleteOnExit();
+        // file.deleteOnExit();
 
     }
 
 
+    @Test
+    public void test9() throws Exception {
+        byte[] buffer = new byte[2];
 
+        FileInputStream fileInputStream = new FileInputStream("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\FileIODemo.java");
+        int length = 0;
+
+
+        while ((length =fileInputStream.read(buffer) )!= -1) {
+            //System.out.println(new String(buffer,0,length));
+            System.out.print(new String(buffer,0,length));
+            System.out.flush();
+
+        }
+
+
+        //        FileOutputStream fileOutputStream=new FileOutputStream("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\ds.java");
+//        while (fileInputStream.read(buffer) !=-1){
+//            fileOutputStream.write(buffer);
+//        }
+
+        System.out.println("操作完成");
+
+    }
 
 
     @Test
-    public void test10()throws Exception{
-        byte[] buffer=new byte[1024];
+    public void test10() throws Exception {
+        byte[] buffer = new byte[1024];
 
-        FileInputStream fileInputStream=new FileInputStream("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\FileIODemo.java");
-        FileOutputStream fileOutputStream=new FileOutputStream("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\ds.java");
-        while (fileInputStream.read(buffer) !=-1){
+        FileInputStream fileInputStream = new FileInputStream("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\FileIODemo.java");
+        FileOutputStream fileOutputStream = new FileOutputStream("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\ds.java");
+        while (fileInputStream.read(buffer) != -1) {
             fileOutputStream.write(buffer);
         }
 
@@ -87,34 +110,23 @@ public class FileIODemo {
     }
 
 
-
-
-
-
-
     @Test
-    public void test11()throws Exception{
-        char[] buffer=new char[1024];
+    public void test11() throws Exception {
+        char[] buffer = new char[1024];
 
 
-        FileReader fileReader=new FileReader(new File("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\FileIODemo.java"));
-        FileWriter fileWriter=new FileWriter(new File("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\ds.java"));
+        FileReader fileReader = new FileReader(new File("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\FileIODemo.java"));
+        FileWriter fileWriter = new FileWriter(new File("C:\\work\\IDEAWorkSpace\\rookie-project\\haizhilangzigithub\\rookies-javases\\rookie-javase\\src\\main\\java\\com\\java\\io\\ds.java"));
         int len;
-        while ((len=fileReader.read(buffer)) !=-1){
-            fileWriter.write(buffer,0,len);
+        while ((len = fileReader.read(buffer)) != -1) {
+            fileWriter.write(buffer, 0, len);
 
         }
-
 
 
         System.out.println("操作完成");
 
     }
-
-
-
-
-
 
 
 }

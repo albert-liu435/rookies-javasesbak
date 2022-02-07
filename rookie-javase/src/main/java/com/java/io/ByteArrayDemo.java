@@ -113,4 +113,10 @@ public class ByteArrayDemo {
         byteArrayOutputStream.close();
 
     }
+
+
+    @Test
+    public void test4(){
+        System.out.println(4<< 1);
+    }
 }
