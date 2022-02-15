@@ -3,6 +3,7 @@ package com.java.io;
 import org.junit.Test;
 
 import java.io.*;
+import java.util.Random;
 
 /**
  * @Classname BufferedIODemo
@@ -47,4 +48,25 @@ public class BufferedIODemo {
         }
 
     }
+
+
+
+    @Test
+    public void test3(){
+         final Random random = new Random();
+
+         for(int i=0;i<100;i++){
+             System.out.println(random.nextLong());
+         }
+
+
+
+
+    }
+
+    @Test
+    public void testBufferedIO(){
+
+    }
+
 }
