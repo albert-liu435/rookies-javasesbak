@@ -1,5 +1,10 @@
 package com.java.nio;
 
+import org.junit.Test;
+
+import java.nio.Buffer;
+import java.nio.ByteBuffer;
+
 /**
  * @Classname BufferDome
  * @Description TODO
@@ -10,8 +15,11 @@ package com.java.nio;
 public class BufferDome {
 
 
+    @Test
+    public void test1() {
 
-
+       // Buffer buffer=new ByteBuffer();
+    }
 
 
 }

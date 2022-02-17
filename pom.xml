@@ -16,6 +16,7 @@
         <module>rookie-javase</module>
         <module>rookie-tomcat</module>
         <module>rookie-log</module>
+        <module>rookie-netty</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
