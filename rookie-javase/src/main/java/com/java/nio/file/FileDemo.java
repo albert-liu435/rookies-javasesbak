@@ -1,47 +1,19 @@
-package com.rookie.bigdata.nio.buffer;
+package com.java.nio.file;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @Classname BufferCharViewDemo
+ * @Classname FileDemo
  * @Description TODO
  * @Author rookie
- * @Date 2022/1/21 16:12
+ * @Date 2022/2/22 10:21
  * @Version 1.0
  */
-public class BufferCharViewDemo {
-
-    public static void main(String[] args) {
-        ByteBuffer byteBuffer = ByteBuffer.allocate(7).order(ByteOrder.BIG_ENDIAN);
-        CharBuffer charBuffer = byteBuffer.asCharBuffer();
-
-        // Load the ByteBuffer with some bytes
-        byteBuffer.put(0, (byte) 0);
-        byteBuffer.put(1, (byte) 'H');
-        byteBuffer.put(2, (byte) 0);
-        byteBuffer.put(3, (byte) 'i');
-        byteBuffer.put(4, (byte) 0);
-        byteBuffer.put(5, (byte) '!');
-        byteBuffer.put(6, (byte) 0);
-
-        println(byteBuffer);
-        println(charBuffer);
-
-    }
-
-    private static void println(Buffer buffer) {
-        System.out.println("pos=" + buffer.position() + ", limit=" + buffer.limit() + ", capacity=" + buffer.capacity() + ": '" + buffer.toString() + "'");
-    }
-
-
-
+public class FileDemo {
 
 
     public static void fastCopy(String src, String dist) throws IOException {
@@ -81,6 +53,4 @@ public class BufferCharViewDemo {
             buffer.clear();
         }
     }
-
-
 }

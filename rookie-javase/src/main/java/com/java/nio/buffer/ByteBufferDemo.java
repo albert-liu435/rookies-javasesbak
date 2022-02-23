@@ -131,6 +131,38 @@ public class ByteBufferDemo {
 
 
 
+
+
+    @Test
+    public void TesDirectByteBuffer1(){
+
+        //填充
+        ByteBuffer bf = ByteBuffer.allocateDirect(10);
+        bf.put((byte) 'M');
+        bf.put((byte) 'e');
+        bf.put((byte) 'l');
+        bf.put((byte) 'l');
+        bf.put((byte) 'o');
+        bf.put((byte) 'w');
+
+        //进行翻转
+        bf.flip();
+        //释放
+        for (int i = 0; bf.hasRemaining(); i++) {
+            byte b1 = bf.get();
+            //  System.out.println(b1);
+//            //打印出16进制
+//            String hex = Integer.toHexString(b1 & 0xFF);
+//            System.out.println(hex);
+            System.out.println((char) b1);
+        }
+
+
+
+    }
+
+
+
     @Test
     public void testAsCharBuffer1() {
         ByteBuffer bb = ByteBuffer.wrap("Some text".getBytes());
@@ -172,8 +204,11 @@ public class ByteBufferDemo {
 
         CharBuffer cb = bf.asCharBuffer();
         // cb.flip();
-        String s = cb.toString();
-        System.out.print(s);
+        char c = cb.get();
+        System.out.println(c);
+
+//        String s = cb.toString();
+//        System.out.print(s);
     }
 
 
