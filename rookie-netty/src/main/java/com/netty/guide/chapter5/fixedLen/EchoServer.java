@@ -1,8 +1,6 @@
-package com.netty.guide.chapter5;
+package com.netty.guide.chapter5.fixedLen;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -10,7 +8,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.FixedLengthFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
@@ -19,7 +17,7 @@ import io.netty.handler.logging.LoggingHandler;
  * @Classname EchoServer
  * @Description TODO
  * @Author rookie
- * @Date 2022/2/24 10:16
+ * @Date 2022/2/24 10:27
  * @Version 1.0
  */
 public class EchoServer {
@@ -36,11 +34,8 @@ public class EchoServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) {
-                            // 设置分隔符为 $_ 然后进行消息的分割
-                            // 加上了两个解码器, 一个自定义分隔符, 一个String解码器
-                            ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
-                            // 添加两个参数, 一个是分隔符 缓冲对象, 一个是消息的最大长度
-                            ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
+                            // 增加解码器 设定 定长的长度
+                            ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
                             ch.pipeline().addLast(new StringDecoder());
                             ch.pipeline().addLast(new EchoServerHandler());
                         }
