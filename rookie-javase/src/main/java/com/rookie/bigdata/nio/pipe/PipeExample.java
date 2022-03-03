@@ -40,6 +40,6 @@ public class PipeExample {
             bb.clear();
         }
     }
-}//原文出自【易百教程】，商业转载请联系作者获得授权，非商业请保留原文链接：https://www.yiibai.com/java_nio/java-nio-pipe.html
+}
 
 

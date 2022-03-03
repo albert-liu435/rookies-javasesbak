@@ -21,7 +21,7 @@ public class BlockIODemo {
         ServerSocket socket = new ServerSocket(9999);
         //调用该方法将阻塞，直到有一个连接建立,返回socket用于客户端和服务端之间进行通信
         Socket accept = socket.accept();
-
+        //从连接中读取数据
         BufferedReader in = new BufferedReader(new InputStreamReader(accept.getInputStream()));
 
         PrintWriter out = new PrintWriter(accept.getOutputStream(), true);
