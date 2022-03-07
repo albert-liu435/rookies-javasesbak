@@ -7,6 +7,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+import java.nio.charset.Charset;
 import java.util.logging.Logger;
 
 /**
@@ -44,6 +45,15 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
+//        ByteBuf buf=(ByteBuf)msg;
+//        byte[] req=new byte[buf.readableBytes()];
+//        buf.readBytes(req);
+//        String body=new String(req, Charset.defaultCharset());
+//        System.out.println("Now is :"+body+"; the counter is :" + ++counter);
+
+
+
+
         // 相比于没有使用解码器, 也是简化了很多
         String body = (String) msg;
         System.out.println("Now is : " + body + " ; the counter is : " + ++counter);

@@ -6,6 +6,9 @@ import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
 /**
  * @Classname TimeServerHandler
  * @Description TODO
@@ -19,6 +22,18 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
+        //存在粘包问题
+//        ByteBuf buf = (ByteBuf) msg;
+//        byte[] req = new byte[buf.readableBytes()];
+//        buf.readBytes(req);
+//
+//        String body = new String(req, Charset.defaultCharset()).substring(0, req.length - System.getProperty("line.separator").length());
+//        System.out.println("The time server receive order :" + body + "; the couunter is : " + ++counter);
+//        String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new java.util.Date(
+//                System.currentTimeMillis()).toString() : "BAD ORDER";
+//        ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
+//        ctx.writeAndFlush(resp);
+
         // 以下两行 简化了String的解码, 也没有考虑粘包问题
         String body = (String) msg;
         System.out.println("The time server receive order : " + body
@@ -26,7 +41,9 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 
         String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new java.util.Date(
                 System.currentTimeMillis()).toString() : "BAD ORDER";
-        currentTime = currentTime + System.getProperty("line.separator");
+
+        currentTime =currentTime+System.getProperty("line.separator");
+
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
         ctx.writeAndFlush(resp);
     }

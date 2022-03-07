@@ -27,7 +27,7 @@ public class SelectorExample {
         System.out.println("Selector is open for making connection: " + selector.isOpen());
         // Get the server socket channel and register using selector
         ServerSocketChannel SS = ServerSocketChannel.open();
-        InetSocketAddress hostAddress = new InetSocketAddress("localhost", 8080);
+        InetSocketAddress hostAddress = new InetSocketAddress("localhost", 8081);
         SS.bind(hostAddress);
         SS.configureBlocking(false);
         int ops = SS.validOps();
